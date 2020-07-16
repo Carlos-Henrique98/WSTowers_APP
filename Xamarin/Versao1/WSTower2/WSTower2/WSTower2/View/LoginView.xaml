@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:local="clr-namespace:WSTower2.CustomRenderer"
              xmlns:magic="clr-namespace:MagicGradients;assembly=MagicGradients"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              ControlTemplate="{StaticResource Cssbackground}"
@@ -34,18 +35,26 @@
             <Frame BackgroundColor="White" BorderColor="#FFF" Padding="5" Margin="0,15" CornerRadius="10" HorizontalOptions="FillAndExpand">
                 <StackLayout Orientation="Horizontal" Spacing="10">
                     <Image Source="nome.png" WidthRequest="25"/>
-                    <Entry Placeholder="Usuário:" PlaceholderColor="Black" FontSize="16" WidthRequest="200" ClearButtonVisibility="WhileEditing"/>
+                    <!--<Entry Placeholder="Usuário:" PlaceholderColor="Black" FontSize="16" WidthRequest="200" ClearButtonVisibility="WhileEditing"/>-->
+                    <local:CustomEntry Placeholder="Usuário:" PlaceholderColor="Black" FontAttributes="None" FontSize="16" WidthRequest="200" ClearButtonVisibility="WhileEditing"/>
                 </StackLayout>
             </Frame>
 
             <Frame BackgroundColor="White" BorderColor="#FFF" Padding="5" Margin="0" CornerRadius="10" HorizontalOptions="FillAndExpand" >
                 <StackLayout Orientation="Horizontal" Spacing="10">
                     <Image Source="senha.png" WidthRequest="25" />
-                    <Entry IsPassword="true" Placeholder="Senha:" PlaceholderColor="Black" MaxLength="10" FontSize="16" WidthRequest="200" ClearButtonVisibility="WhileEditing" />
+                    <!--<Entry IsPassword="true" Placeholder="Senha:" PlaceholderColor="Black" MaxLength="10" FontSize="16" WidthRequest="200" ClearButtonVisibility="WhileEditing" />-->
+                    <local:CustomEntry IsPassword="true" Placeholder="Usuário:" PlaceholderColor="Black" FontAttributes="None" FontSize="16" WidthRequest="200" ClearButtonVisibility="WhileEditing"/>
                 </StackLayout>
             </Frame>
+            
+            <StackLayout Orientation="Horizontal" Margin="0,15">
+                <CheckBox IsChecked="False" Color="White"/>
+                <Label Text="Lembrar senha" HorizontalTextAlignment="Start" FontSize="12" VerticalTextAlignment="Center" TextColor="White"/>
+                <Label Text="Esqueceu a Senha?" HorizontalTextAlignment="End" FontSize="12" TextColor="White" HorizontalOptions="EndAndExpand" VerticalTextAlignment="Center" FontAttributes="Bold"/>
+            </StackLayout>
 
-    </StackLayout>
+        </StackLayout>
             <Button Text="Logar" 
                     VerticalOptions="CenterAndExpand" 
                     HorizontalOptions="Center" 

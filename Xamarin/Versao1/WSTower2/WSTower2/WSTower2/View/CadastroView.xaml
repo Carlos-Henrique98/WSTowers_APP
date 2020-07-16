@@ -2,8 +2,9 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:local="clr-namespace:WSTower2.CustomRenderer"
              xmlns:magic="clr-namespace:MagicGradients;assembly=MagicGradients"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              ControlTemplate="{StaticResource Cssbackground}"
              mc:Ignorable="d"
              x:Class="WSTower2.View.CadastroView">
@@ -29,36 +30,33 @@
     </ContentPage.Resources>
 
     <StackLayout>
-        <Image Source="WSTowerswhite.png" Margin="50,50,50,0" WidthRequest="240" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" />
+        
+            <Image Source="WSTowerswhite.png" Margin="50,50,50,0" WidthRequest="240" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" />
 
         <StackLayout Padding="50" >
             <Frame BackgroundColor="White" BorderColor="#FFF" Padding="5" Margin="0,15" CornerRadius="10" HorizontalOptions="FillAndExpand">
                 <StackLayout Orientation="Horizontal" Spacing="10">
                     <Image Source="nome.png" WidthRequest="25"/>
-                    <Entry Placeholder="Usuário:" PlaceholderColor="Black" FontSize="16" WidthRequest="200" ClearButtonVisibility="WhileEditing"/>
+                    <local:CustomEntry Placeholder="Usuário:" PlaceholderColor="Black" FontAttributes="None" FontSize="16" WidthRequest="200" ClearButtonVisibility="WhileEditing"/>
                 </StackLayout>
             </Frame>
 
             <Frame BackgroundColor="White" BorderColor="#FFF" Padding="5" Margin="0" CornerRadius="10" HorizontalOptions="FillAndExpand" >
                 <StackLayout Orientation="Horizontal" Spacing="10">
                     <Image Source="enviar.png" WidthRequest="25"/>
-                    <Entry Placeholder="Email:" PlaceholderColor="Black" FontSize="16" WidthRequest="200" ClearButtonVisibility="WhileEditing" />
+                    <!--<Entry Placeholder="Email:" PlaceholderColor="Black" FontSize="16" WidthRequest="200" ClearButtonVisibility="WhileEditing" />-->
+                    <local:CustomEntry Placeholder="Email:" PlaceholderColor="Black" FontAttributes="None" FontSize="16" WidthRequest="200" ClearButtonVisibility="WhileEditing"/>
                 </StackLayout>
             </Frame>
 
             <Frame BackgroundColor="White" BorderColor="#FFF" Padding="5" Margin="0,15" CornerRadius="10" HorizontalOptions="FillAndExpand">
                 <StackLayout Orientation="Horizontal" Spacing="10">
                     <Image Source="senha.png" WidthRequest="25"/>
-                    <Entry IsPassword="true" Placeholder="Senha:" PlaceholderColor="Black" FontSize="16" WidthRequest="200" ClearButtonVisibility="WhileEditing"/>
+                    <!--<Entry IsPassword="true" Placeholder="Senha:" PlaceholderColor="Black" FontSize="16" WidthRequest="200" ClearButtonVisibility="WhileEditing"/>-->
+                    <local:CustomEntry Placeholder="Senha:" PlaceholderColor="Black" FontAttributes="None" FontSize="16" WidthRequest="200" ClearButtonVisibility="WhileEditing"/>
                 </StackLayout>
             </Frame>
-            
         </StackLayout>
-
-        <!--<Label Text="{Binding Number, StringFormat='Value is now {0}'}"
-                   FontSize="Large"
-                   VerticalOptions="CenterAndExpand"
-                    HorizontalOptions="Center" />-->
 
         <Button Text="Cadastrar" 
                     VerticalOptions="CenterAndExpand" 
