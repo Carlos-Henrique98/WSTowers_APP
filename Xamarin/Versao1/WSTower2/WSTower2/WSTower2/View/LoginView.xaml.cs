@@ -21,5 +21,10 @@ namespace WSTower2.View
         {
             Navigation.PushAsync(new CadastroView());
         }
+
+        private void Button_Clicked_1(object sender, EventArgs e)
+        {
+            App.Current.MainPage = new NavigationPage(new MenuView());
+        }
     }
 }

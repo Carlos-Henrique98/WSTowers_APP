@@ -11,10 +11,7 @@ namespace WSTower2
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new LoginView());
-            //MainPage = new SplashView();
-            //MainPage = new LoginView();
-            //MainPage = new CadastroView();
+            MainPage = new SplashView();
         }
 
         protected override void OnStart()

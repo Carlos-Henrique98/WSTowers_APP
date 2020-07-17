@@ -44,7 +44,7 @@
                 <StackLayout Orientation="Horizontal" Spacing="10">
                     <Image Source="senha.png" WidthRequest="25" />
                     <!--<Entry IsPassword="true" Placeholder="Senha:" PlaceholderColor="Black" MaxLength="10" FontSize="16" WidthRequest="200" ClearButtonVisibility="WhileEditing" />-->
-                    <local:CustomEntry IsPassword="true" Placeholder="Usuário:" PlaceholderColor="Black" FontAttributes="None" FontSize="16" WidthRequest="200" ClearButtonVisibility="WhileEditing"/>
+                    <local:CustomEntry IsPassword="true" Placeholder="Senha:" PlaceholderColor="Black" FontAttributes="None" FontSize="16" WidthRequest="200" ClearButtonVisibility="WhileEditing"/>
                 </StackLayout>
             </Frame>
             
@@ -63,7 +63,8 @@
                     Opacity="1"
                     TextColor="White" 
                     BorderWidth="5" 
-                    CornerRadius="10"/>
+                    CornerRadius="10"
+                    Clicked="Button_Clicked_1"/>
 
         <Button Text="Cadastrar" 
                     VerticalOptions="CenterAndExpand" 

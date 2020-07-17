@@ -15,6 +15,20 @@ namespace WSTower2.View
         public SplashView()
         {
             InitializeComponent();
+
+            Timer();
+        }
+
+        private void Timer()
+        {
+            Device.StartTimer(new TimeSpan(0, 0, 5), () =>
+            {
+                Device.BeginInvokeOnMainThread(() =>
+                {
+                    App.Current.MainPage = new NavigationPage(new LoginView());
+                });
+                return false;
+            });
         }
     }
 }
