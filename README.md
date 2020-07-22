@@ -1,3 +1,3 @@
 # WSTowers_APP
 Aplicativo Mobile - WSTowers
-Telas: Principal, Login, Cadastro, Sobre
+Telas: Principal, Login, Cadastro, Sobre, ListaDeEstadiosAprovados, ListaDeEstadiosReprovados
